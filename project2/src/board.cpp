@@ -9,7 +9,7 @@
 
  bool Board::set(std::size_t x, std::size_t y, FieldState symbol) 
  {
-     if (x<3 || y<3)
+     if (x<3 && y<3)
      {
         fields[x][y] = symbol;
         return true;
@@ -19,7 +19,7 @@
 
  FieldState Board::get(std::size_t x, std::size_t y) const 
  {
-     if(x<3 || y<3)
+     if(x<3 && y<3)
     return fields[x][y];
     return FieldState::Error;
  }
